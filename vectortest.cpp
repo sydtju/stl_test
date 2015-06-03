@@ -19,7 +19,7 @@ void testvector(){
 	cout<<"\nvector的最后一个元素是："<<avector.back()<<endl;
 	cout<<"\nvector删除最后一个元素后：";
 	avector.erase(avector.begin()+3);//erase是删除元素后 指向下一个元素的位置  所以当删除最后一个元素的时候会出错
-	//还可以删除一个范围内的数据
+	//还可以删除一个范围内的数据   删除中间的数据完成之后 后面的数据向前移动，是顺序存储结构
 	for(pointer=avector.begin();pointer!=avector.end();pointer++){
 		cout<<*pointer<<"   ";
 	}
