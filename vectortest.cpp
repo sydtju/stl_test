@@ -29,3 +29,38 @@ void testvector(){
 		cout<<*pointer<<"   ";
 	}
 }
+void show(vector<int> &dat){
+	vector<int>::iterator it;		
+	cout<<"遍历结果是："<<endl;
+	for (it=dat.begin();it!=dat.end();++it)
+	{
+		cout<<*it<<"  ";
+	}
+	cout<<"\nsize="<<dat.size()<<endl;
+	cout<<"capacity="<<dat.capacity()<<endl;
+	//cout<<"reserve="<<dat.reserve()<<endl;
+}
+void test_vector(){
+	vector<int> vcon;
+	vcon.reserve(3);
+	show(vcon);
+	cout<<"尾部加入一个 2 元素：\n";
+	vcon.insert(vcon.end(),2);
+	show(vcon);
+	cout<<"尾部加入2个 3 元素：\n";
+	vcon.insert(vcon.end(),2,3);
+	show(vcon);
+	cout<<"尾部加入1个 4 元素：\n";
+	vcon.insert(vcon.end(),1,4);
+	show(vcon);
+	cout<<"尾部加入一个 从头到尾后 元素：\n";
+	vcon.insert(vcon.end(),vcon.begin(),vcon.end());
+	show(vcon);
+	cout<<"尾部加入1个 4 元素：\n";
+	vcon.insert(vcon.end(),1,4);
+	show(vcon);
+	cout<<"排序之后元素：\n";	
+	
+	show(vcon);
+	system("pause");
+}
