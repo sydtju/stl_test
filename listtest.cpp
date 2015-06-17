@@ -22,3 +22,23 @@ void listtest(){
 	}
 	cout<<endl;
 }
+void show_list(list<int> dat){
+	list<int>::iterator it;
+	cout<<"遍历结果如下："<<endl;
+	for (it=dat.begin();it!=dat.end();++it)//迭代器不能直接加数字  只能是++ --
+	{
+		cout<<*it<<"  ";
+	}
+	cout<<"\nsize="<<dat.size()<<endl;
+	cout<<"\nsize="<<sizeof(dat)<<endl;
+	system("pause");
+}
+void list_test(){
+	list<int> tlist;
+	//tlist.push_back(1);
+	show_list(tlist);
+	tlist.push_back(1);
+	show_list(tlist);
+	tlist.push_back(2);
+	show_list(tlist);
+}
