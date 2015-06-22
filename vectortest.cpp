@@ -60,7 +60,7 @@ void test_vector(){
 	vcon.insert(vcon.end(),1,4);
 	show(vcon);
 	cout<<"排序之后元素：\n";	
-	
+	//vcon.capacity();容量 vcon.reserve();保留大小
 	show(vcon);
 	system("pause");
 }
